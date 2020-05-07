@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SelectedValue = ({isSelecting, setIsSelecting}) => {
+const SelectedValue = ({selection, isSelecting, setIsSelecting}) => {
 
   return (
-      <p onClick={() => setIsSelecting(!isSelecting)}>SelectedValue</p>
+      <p onClick={() => setIsSelecting(!isSelecting)}>{selection}</p>
   )
 }
 

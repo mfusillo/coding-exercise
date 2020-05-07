@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Selector = () => {
+const Selector = ({selection, setSelection}) => {
+
+  const handleSelection = (event) => {
+    setSelection(selection + ' , ' + event.target.value)
+  }
 
   return (
       <form>
-        <input type="checkbox" id="abrasion" value="abrasion" />
+        <input type="checkbox" id="abrasion" value="abrasion" onChange={handleSelection}/>
         <label htmlFor="abrasion">ABRASION</label><br/>
-        <input type="checkbox" id="blunt" value="blunt" />
+        <input type="checkbox" id="blunt" value="blunt" onChange={handleSelection}/>
         <label htmlFor="blunt">BLUNT</label><br/>
       </form>
   )

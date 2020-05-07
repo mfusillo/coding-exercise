@@ -6,10 +6,12 @@ const App = () => {
 
   const [isSelecting, setIsSelecting] = useState(false)
 
+  const [selection, setSelection] = useState("Mechanism")
+
   return (
     <>
-      <SelectedValue isSelecting={isSelecting} setIsSelecting={setIsSelecting}/>
-      {isSelecting && <Selector />} 
+      <SelectedValue selection={selection} isSelecting={isSelecting} setIsSelecting={setIsSelecting}/>
+      {isSelecting && <Selector selection= {selection} setSelection={setSelection}/>} 
     </>
   )
 }
