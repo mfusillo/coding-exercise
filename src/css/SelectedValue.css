@@ -1,3 +1,16 @@
+section.selected-values {
+  place-self: center;
+  margin-top: 15px;
+  display: grid;
+  grid-template-rows: 1fr auto; 
+  gap: 5px; 
+  border: 1px solid #b8b8b8;
+}
+
+div {
+  place-self: center;
+}
+
 div:empty:before {
   content: 'MECHANISM';
   color:black

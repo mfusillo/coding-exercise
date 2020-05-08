@@ -1,3 +1,13 @@
+form {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  align-self: center;
+}
+
 input:checked + label {
   background-color: blue;
 }

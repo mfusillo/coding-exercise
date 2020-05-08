@@ -16,12 +16,12 @@ const SelectedValue = ({options, isSelecting, setIsSelecting}) => {
   console.log(optionsSelected === false)
 
   return (
-    <>
+    <section className="selected-values">
       <div onClick={() => setIsSelecting(!isSelecting)}>
         {optionsSelected}
       </div>
-      {optionsSelected.every(option => option === undefined) ? '' : <div>MECHANISM OF INJURY</div>}
-    </>
+      {optionsSelected.every(option => option === undefined) ? '' : <div>Mechanism of Injury</div>}
+    </section>
   )
 }
 
