@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const SelectedValue = ({selection, isSelecting, setIsSelecting}) => {
+const SelectedValue = ({options, isSelecting, setIsSelecting}) => {
+
+  const optionsChecked = options.map(option => {
+    if(option.isChecked){
+      return (
+        <Fragment key={option.id}>
+          <p onClick={() => setIsSelecting(!isSelecting)}>{option.value}</p>
+        </Fragment>
+      )
+    }
+  })
 
   return (
-      <p onClick={() => setIsSelecting(!isSelecting)}>{selection}</p>
+    <>
+      {optionsChecked}
+    </>
   )
 }
 

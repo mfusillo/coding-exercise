@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const Selector = ({selection, setSelection}) => {
+const Selector = ({options, setOptions, selection, setSelection}) => {
 
   const handleSelection = (event) => {
+
+    let optionsChecked = options
+
     setSelection(selection + ' , ' + event.target.value)
+
+    optionsChecked.forEach(option => {
+      if(option.value === event.target.value){
+        option.isChecked = event.target.checked
+      }
+    })
+
+    setOptions(optionsChecked)
   }
 
+  const optionsToSelect = options.map(({id, value, isChecked}) => {
+    return (
+      <Fragment key={id}>
+        <input type="checkbox" id={value} value={value} checked={isChecked} onChange={handleSelection}/>
+        <label htmlFor={value}>{value}</label><br/>
+      </Fragment>
+    )
+  })
+
   return (
-      <form>
-        <input type="checkbox" id="abrasion" value="abrasion" onChange={handleSelection}/>
-        <label htmlFor="abrasion">ABRASION</label><br/>
-        <input type="checkbox" id="blunt" value="blunt" onChange={handleSelection}/>
-        <label htmlFor="blunt">BLUNT</label><br/>
-      </form>
+    <form>
+      {optionsToSelect}
+    </form>
   )
 }
 
