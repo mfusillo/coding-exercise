@@ -1,0 +1,7 @@
+input:checked + label {
+  background-color: blue;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
