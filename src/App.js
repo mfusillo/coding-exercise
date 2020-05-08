@@ -5,6 +5,7 @@ import SelectedValue from './components/SelectedValue';
 const App = () => {
 
   const [options, setOptions] = useState([
+    // {id: 0, value: "MECHANISM", isChecked: true},
     {id: 1, value: "ABRASION", isChecked: false},
     {id: 2, value: "BLUNT", isChecked: false},
     {id: 3, value: "BURN", isChecked: false},

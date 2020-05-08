@@ -1,0 +1,7 @@
+p:empty:before {
+  content: 'MECHANISM';
+  color:black
+}
+p:focus::before {
+  content: '';
+}

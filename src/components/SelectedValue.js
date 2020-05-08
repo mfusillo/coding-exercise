@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
+import '../css/SelectedValue.css'
 
 const SelectedValue = ({options, isSelecting, setIsSelecting}) => {
 
-  const optionsChecked = options.map(option => {
+  const optionsSelected = options.map(option => {
     if(option.isChecked){
       return (
         <Fragment key={option.id}>
-          <p onClick={() => setIsSelecting(!isSelecting)}>{option.value}</p>
+          {option.value + ' '}
         </Fragment>
       )
     }
@@ -14,7 +15,9 @@ const SelectedValue = ({options, isSelecting, setIsSelecting}) => {
 
   return (
     <>
-      {optionsChecked}
+      <p onClick={() => setIsSelecting(!isSelecting)}>
+        {optionsSelected}
+      </p>
     </>
   )
 }
