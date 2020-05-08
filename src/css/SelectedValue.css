@@ -1,7 +1,8 @@
-p:empty:before {
+div:empty:before {
   content: 'MECHANISM';
   color:black
 }
-p:focus::before {
+
+div:focus::before {
   content: '';
 }
