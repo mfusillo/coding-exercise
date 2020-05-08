@@ -1,19 +1,36 @@
 section.selected-values {
-  place-self: center;
+  /* text-align: center;
+  place-self: center; */
   margin-top: 15px;
-  display: grid;
-  grid-template-rows: 1fr auto; 
-  gap: 5px; 
+  /* display: grid;
+  grid-template-rows: 1fr auto;  */
   border: 1px solid #b8b8b8;
+  min-height: 68px;
+  background-color: #149dd9;
+  color: white;
 }
 
-div {
-  place-self: center;
+div.subtitle {
+  padding-bottom: 10px;
+  font-weight: normal;
 }
 
-div:empty:before {
+
+div.values:empty:before {
   content: 'MECHANISM';
-  color:black
+  color: black;
+  width: 190px;
+  height: 43px;
+  position: absolute;
+  margin: auto;
+  margin-top: 34px;
+  padding-top: 25px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: white;
 }
 
 div:focus::before {

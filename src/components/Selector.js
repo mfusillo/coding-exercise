@@ -22,7 +22,7 @@ const Selector = ({options, setOptions, selection, setSelection}) => {
     return (
       <Fragment key={id}>
         <input type="checkbox" id={value} value={value} checked={isChecked} onChange={handleSelection}/>
-        <label htmlFor={value}>{value}</label><br/>
+        <label htmlFor={value}>{value}</label>
       </Fragment>
     )
   })

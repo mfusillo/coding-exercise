@@ -1,8 +1,17 @@
-/* section {
-  display: grid;
-  grid-template-rows: 32% auto;
-} */
-
 * {
   font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+section {
+  display: inline-block;
+}
+
+div {
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  min-width: 170px;
+  font-weight: bold;
 }
