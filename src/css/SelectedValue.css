@@ -1,9 +1,5 @@
 section.selected-values {
-  /* text-align: center;
-  place-self: center; */
   margin-top: 15px;
-  /* display: grid;
-  grid-template-rows: 1fr auto;  */
   border: 1px solid #b8b8b8;
   min-height: 68px;
   background-color: #149dd9;
