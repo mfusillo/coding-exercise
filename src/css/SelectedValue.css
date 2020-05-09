@@ -4,6 +4,7 @@ section.selected-values {
   min-height: 68px;
   background-color: #149dd9;
   color: white;
+  cursor: pointer;
 }
 
 div {

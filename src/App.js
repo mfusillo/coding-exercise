@@ -60,9 +60,9 @@ const App = () => {
         {datasetsToSelect}
       </select>
 
-
       <SelectedValue currentDataset={currentDataset} isSelecting={isSelecting} setIsSelecting={setIsSelecting}/>
       {isSelecting && <Selector currentDataset={currentDataset} setCurrentDataset={setCurrentDataset} selection={selection} setSelection={setSelection} />} 
+    
     </section>
   )
 }
