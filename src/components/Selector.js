@@ -4,19 +4,16 @@ import '../css/Selector.css'
 const Selector = ({currentDataset, setCurrentDataset, selection, setSelection}) => {
 
   const handleSelection = (event) => {
-
     setSelection(selection + ' , ' + event.target.value)
-
-    currentDataset.content.forEach(option => {
+    currentDataset.options.forEach(option => {
       if(option.value === event.target.value){
         option.isChecked = event.target.checked
       }
     })
-
     setCurrentDataset(currentDataset)
   }
 
-  const optionsToSelect = currentDataset.content.map(({id, value, isChecked}) => {
+  const optionsToSelect = currentDataset.options.map(({id, value, isChecked}) => {
     return (
       <Fragment key={id}>
         <input type="checkbox" id={value} value={value} checked={isChecked} onChange={handleSelection}/>

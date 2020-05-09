@@ -13,6 +13,9 @@ div {
   padding-top: 10px;
   min-width: 170px;
   font-weight: bold;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 div.subtitle {

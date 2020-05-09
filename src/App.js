@@ -8,7 +8,7 @@ const App = () => {
   const [datasets, setDatasets] = useState([
     {
       name: "MECHANISM",
-      content: [
+      options: [
         {id: 1, value: "ABRASION", isChecked: false},
         {id: 3, value: "BURN", isChecked: false},
         {id: 4, value: "FROST", isChecked: false},
@@ -21,7 +21,7 @@ const App = () => {
     },
     {
       name: "MODE OF TRANSPORT",
-      content: [
+      options: [
         {id: 1, value: "AMBULANCE", isChecked: false},
         {id: 3, value: "HELICOPTER", isChecked: false},
         {id: 4, value: "CAR", isChecked: false}
@@ -53,7 +53,7 @@ const App = () => {
   }
 
   return (
-    <section className="main-container">
+    <section className="main-container" tabIndex="0" onBlur={() => setIsSelecting(false)}>
       
       <select onChange={handleChange} style={{position: "absolute", left: 0}}>
         <option disabled selected>Select an Option</option>
