@@ -5,19 +5,9 @@ import './css/App.css'
 
 const App = () => {
 
-  const [options, setOptions] = useState([
-    {id: 1, value: "ABRASION", isChecked: false},
-    {id: 3, value: "BURN", isChecked: false},
-    {id: 4, value: "FROST", isChecked: false},
-    {id: 5, value: "GUN SHOT", isChecked: false},
-    {id: 6, value: "LACERATION", isChecked: false},
-    {id: 7, value: "RTC", isChecked: false},
-    {id: 8, value: "STAB", isChecked: false}
-  ])
-
   const [datasets, setDatasets] = useState([
     {
-      name: "Mechanism",
+      name: "MECHANISM",
       content: [
         {id: 1, value: "ABRASION", isChecked: false},
         {id: 3, value: "BURN", isChecked: false},
@@ -30,7 +20,7 @@ const App = () => {
       subtitle: "Mechanism of Injury"
     },
     {
-      name: "Mode of Transport",
+      name: "MODE OF TRANSPORT",
       content: [
         {id: 1, value: "AMBULANCE", isChecked: false},
         {id: 3, value: "HELICOPTER", isChecked: false},
@@ -45,7 +35,6 @@ const App = () => {
   const [isSelecting, setIsSelecting] = useState(false)
 
   const [selection, setSelection] = useState("")
-
 
   const datasetsToSelect = datasets.map((dataset, index) => {
     return (
@@ -72,8 +61,8 @@ const App = () => {
       </select>
 
 
-      <SelectedValue currentDataset={currentDataset} options={options} isSelecting={isSelecting} setIsSelecting={setIsSelecting}/>
-      {isSelecting && <Selector currentDataset={currentDataset} setCurrentDataset={setCurrentDataset} selection={selection} setSelection={setSelection} options={options} setOptions={setOptions} />} 
+      <SelectedValue currentDataset={currentDataset} isSelecting={isSelecting} setIsSelecting={setIsSelecting}/>
+      {isSelecting && <Selector currentDataset={currentDataset} setCurrentDataset={setCurrentDataset} selection={selection} setSelection={setSelection} />} 
     </section>
   )
 }

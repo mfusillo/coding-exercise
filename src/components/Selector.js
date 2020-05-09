@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import '../css/Selector.css'
 
-const Selector = ({currentDataset, setCurrentDataset, options, setOptions, selection, setSelection}) => {
+const Selector = ({currentDataset, setCurrentDataset, selection, setSelection}) => {
 
   const handleSelection = (event) => {
 
