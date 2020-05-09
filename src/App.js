@@ -53,7 +53,7 @@ const App = () => {
   }
 
   return (
-    <section>
+    <section className="main-container">
       
       <select onChange={handleChange} style={{position: "absolute", left: 0}}>
         <option disabled selected>Select an Option</option>

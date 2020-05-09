@@ -1,9 +1,17 @@
 section.selected-values {
   margin-top: 15px;
-  border: 1px solid #b8b8b8;
+  border: 1px solid #d8d8d8;
   min-height: 68px;
   background-color: #149dd9;
   color: white;
+}
+
+div {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  min-width: 170px;
+  font-weight: bold;
 }
 
 div.subtitle {
@@ -11,8 +19,8 @@ div.subtitle {
   font-weight: normal;
 }
 
-
 div.no-values {
+  display: inline-block;
   color: black;
   background-color: white;
   height: 68px;
