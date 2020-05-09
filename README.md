@@ -1,12 +1,9 @@
 The page is hosted online here: https://mfusillo.github.io/coding-exercise/
 
-## Available Scripts
+In order to run the app in development mode, clone the repository first and then install all dependencies with `yarn install`.
 
-In the project directory, you can run:
+Once all dependencies are install, run the app using `yarn start`. 
 
-### `yarn start`
-
-Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
