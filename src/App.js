@@ -40,30 +40,40 @@ const App = () => {
     }
   ])
 
-  const [currentDataset, setCurrentDataset] = useState()
+  const [currentDataset, setCurrentDataset] = useState(datasets[0])
 
   const [isSelecting, setIsSelecting] = useState(false)
 
   const [selection, setSelection] = useState("")
 
 
-  const datasetsToSelect = datasets.map(dataset => {
+  const datasetsToSelect = datasets.map((dataset, index) => {
     return (
-      <option key={dataset.index} value={dataset.name} >{dataset.name}</option>
+      <option key={index} value={dataset.name} >{dataset.name}</option>
     )
   })
+  
+  const handleChange = (event) => {
+    const datasetNameSelected = event.target.value
+
+    datasets.forEach(dataset => {
+      if(dataset.name === datasetNameSelected){
+        setCurrentDataset(dataset)
+      }
+    })
+  }
 
   return (
     <section>
       
-      <select onChange={(event) => setCurrentDataset(event.target.value)} style={{position: "absolute", left: 0}}>
+      <select onChange={handleChange} style={{position: "absolute", left: 0}}>
         <option disabled selected>Select an Option</option>
         {datasetsToSelect}
       </select>
 
 
-      <SelectedValue options={options} isSelecting={isSelecting} setIsSelecting={setIsSelecting}/>
-      {isSelecting && <Selector selection={selection} setSelection={setSelection} options={options} setOptions={setOptions} />} 
+      <SelectedValue currentDataset={currentDataset} options={options} isSelecting={isSelecting} setIsSelecting={setIsSelecting}/>
+      {isSelecting && <Selector currentDataset={currentDataset} setCurrentDataset={setCurrentDataset} selection={selection} setSelection={setSelection} options={options} setOptions={setOptions} />} 
     </section>
   )
 }

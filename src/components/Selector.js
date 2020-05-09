@@ -1,24 +1,22 @@
 import React, { Fragment } from 'react';
 import '../css/Selector.css'
 
-const Selector = ({options, setOptions, selection, setSelection}) => {
+const Selector = ({currentDataset, setCurrentDataset, options, setOptions, selection, setSelection}) => {
 
   const handleSelection = (event) => {
 
-    let optionsChecked = options
-
     setSelection(selection + ' , ' + event.target.value)
 
-    optionsChecked.forEach(option => {
+    currentDataset.content.forEach(option => {
       if(option.value === event.target.value){
         option.isChecked = event.target.checked
       }
     })
 
-    setOptions(optionsChecked)
+    setCurrentDataset(currentDataset)
   }
 
-  const optionsToSelect = options.map(({id, value, isChecked}) => {
+  const optionsToSelect = currentDataset.content.map(({id, value, isChecked}) => {
     return (
       <Fragment key={id}>
         <input type="checkbox" id={value} value={value} checked={isChecked} onChange={handleSelection}/>

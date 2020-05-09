@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
 import '../css/SelectedValue.css'
 
-const SelectedValue = ({options, isSelecting, setIsSelecting}) => {
+const SelectedValue = ({currentDataset, options, isSelecting, setIsSelecting}) => {
 
-  const optionsSelected = options.map(option => {
+  const optionsSelected = currentDataset.content.map(option => {
+
     if(option.isChecked){
       return (
         <Fragment key={option.id}>
@@ -12,8 +13,6 @@ const SelectedValue = ({options, isSelecting, setIsSelecting}) => {
       )
     }
   })
-
-  console.log(optionsSelected === false)
 
   return (
     <section className="selected-values">
